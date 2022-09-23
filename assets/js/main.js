@@ -292,26 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
-// read from json file and save to variable score and user 
-var scores = [];
-var users = [];
-fetch('scores.json')
-  .then(response => response.json())
-  .then(data => {
-    scores.push(data.presi1.Score);
-    scores.push(data.presi2.Score);
-    scores.push(data.presi3.Score);
-    scores.push(data.presi4.Score);
-    scores.push(data.presi5.Score);
-    scores.push(data.presi6.Score);
-    users.push(data.presi1.User);
-    users.push(data.presi2.User);
-    users.push(data.presi3.User);
-    users.push(data.presi4.User);
-    users.push(data.presi5.User);
-    users.push(data.presi6.User);
-  });
-//user
+
 // if mobile hide chart
 if (window.innerWidth < 768) {
   document.getElementById("chart").style.display = "none";
@@ -319,3 +300,4 @@ if (window.innerWidth < 768) {
   document.getElementById("footer").style.display = "none";
   // change backgroun colo
 }
+

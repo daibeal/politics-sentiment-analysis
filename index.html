@@ -67,8 +67,8 @@
                   <div class="d-flex align-items-center">
                     <img src="https://pbs.twimg.com/profile_images/1546025607863181315/O5o2j-80_400x400.jpg" class="testimonial-img flex-shrink-0" alt="">
                     <div>
-                      <h3 id="user">Pedro Sánchez</h3>
-                      <h4 id="score">17%</h4>
+                      <h3 id="user1">Pedro Sánchez</h3>
+                      <h4 id="score1"></h4>
                     </div>
                   </div>
                 </div>
@@ -80,8 +80,8 @@
                   <div class="d-flex align-items-center">
                     <img src="https://img2.rtve.es/css/rtve.elecciones/rtve.elecciones.nacional/i/lideres.png/vox_santiago-abascal.png" class="testimonial-img flex-shrink-0" alt="">
                     <div>
-                      <h3 id="user">Santiago Abascal</h3>
-                      <h4 id="score">12%</h4>
+                      <h3 id="user2">Santiago Abascal</h3>
+                      <h4 id="score2"></h4>
                     </div>
                   </div>
                 </div>
@@ -93,8 +93,8 @@
                   <div class="d-flex align-items-center">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Yolanda_D%C3%ADaz_2020_%28cropped%29.jpg" class="testimonial-img flex-shrink-0" alt="">
                     <div>
-                      <h3 id="user">Yolanda Díaz</h3>
-                      <h4 id="score">15%</h4>
+                      <h3 id="user3">Yolanda Díaz</h3>
+                      <h4 id="score3"></h4>
                     </div>
                   </div>
                 </div>
@@ -106,8 +106,21 @@
                   <div class="d-flex align-items-center">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Carmen_Calvo_2020_%28portrait%29.jpg/640px-Carmen_Calvo_2020_%28portrait%29.jpg" class="testimonial-img flex-shrink-0" alt="">
                     <div>
-                      <h3 id="user">Carmen Calvo</h3>
-                      <h4 id="score">16%</h4>
+                      <h3 id="user4">Carmen Calvo</h3>
+                      <h4 id="score4"></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <div class="d-flex align-items-center">
+                    <img src="https://www.lamoncloa.gob.es/gobierno/PublishingImages/GobiernoEnero2020/14012020_Mar%C3%ADa%20Jes%C3%BAs%20Montero.jpg?RenditionID=31" class="testimonial-img flex-shrink-0" alt="">
+                    <div>
+                      <h3 id="user5">María Jesus Montero</h3>
+                      <h4 id="score5"></h4>
                     </div>
                   </div>
                 </div>
@@ -119,8 +132,8 @@
                   <div class="d-flex align-items-center">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Isabel_D%C3%ADaz_Ayuso_en_el_s%C3%A9ptimo_aniversario_de_El_Huffpost_%28cropped%29.jpg/1200px-Isabel_D%C3%ADaz_Ayuso_en_el_s%C3%A9ptimo_aniversario_de_El_Huffpost_%28cropped%29.jpg" class="testimonial-img flex-shrink-0" alt="">
                     <div>
-                      <h3 id="user">Isabel Díaz Ayuso</h3>
-                      <h4 id="score">19%</h4>
+                      <h3 id="user6">Isabel Díaz Ayuso</h3>
+                      <h4 id="score6"></h4>
                     </div>
                   </div>
                 </div>
@@ -159,9 +172,23 @@
   import pandas as pd
   import plotly.graph_objects as go
   import js
+  from js import document
   import plotly.express as px
+
+  sc1 = document.getElementById("score1").innerHTML
+  sc2 = document.getElementById("score2").innerHTML
+  sc3 = document.getElementById("score3").innerHTML
+  sc4 = document.getElementById("score4").innerHTML
+  sc5 = document.getElementById("score5").innerHTML
+  sc6 = document.getElementById("score6").innerHTML
+
+  sc1 = float(sc1)
+
+
+
   user = ['Pedro Sánchez', 'Santiago Abascal', 'Yolanda Díaz', 'Carmen Calvo','María Jesús Montero' ,'Isabel Díaz Ayuso']
-  score = [17, 12, 15, 16,15, 19]
+  score = [sc1, sc2, sc3, sc4, sc5, sc6]
+
   fig = px.bar(x=user, y=score, labels={'x':'User', 'y':'Score'}, color=user, color_discrete_sequence=px.colors.qualitative.Dark24)
   
   fig.update_xaxes(tickangle=45)
@@ -178,7 +205,13 @@
         t=100,
         pad=4
     )
-  )  
+  )
+  
+
+  
+
+
+
   js.plot(fig.to_json(), "chart1")
 </py-script>
 
@@ -200,6 +233,58 @@
         
       </div>
     </div>
+    <script>
+      const url = "https://storage.googleapis.com/download/storage/v1/b/bucket-elastic/o/scores.json?alt=media"
+
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", url);
+      var data2;
+
+      xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      // console.log(xhr.status);
+      // add to variables
+      data2 = JSON.parse(xhr.responseText);
+      // get first element first name
+
+      var tit = document.getElementById("user1")
+      tit.innerHTML = "@" + data2[0].User
+      var valu = document.getElementById("score1")
+      valu.innerHTML = data2[0].Score
+      var tit1 = document.getElementById("user2")
+      tit1.innerHTML = "@" +data2[1].User
+      var val1 = document.getElementById("score2")
+      val1.innerHTML = data2[1].Score
+      var tit2 = document.getElementById("user3")
+      tit2.innerHTML = "@" +data2[2].User
+      var val2 = document.getElementById("score3")
+      val2.innerHTML = data2[2].Score
+      var tit3 = document.getElementById("user4")
+      tit3.innerHTML = "@" +data2[3].User
+      var val3 = document.getElementById("score4")
+      val3.innerHTML = data2[3].Score
+      var tit4 = document.getElementById("user5")
+      tit4.innerHTML = "@" +data2[4].User
+      var val4 = document.getElementById("score5")
+      val4.innerHTML = data2[4].Score
+      var tit5 = document.getElementById("user6")
+      tit5.innerHTML = "@" +data2[5].User
+      var val5 = document.getElementById("score6")
+      val5.innerHTML = data2[5].Score
+  
+
+      
+      
+    
+   }};
+    xhr.send();
+    
+
+    
+    
+
+
+    </script>
 
   </footer><!-- End Footer -->
   <!-- End Footer -->

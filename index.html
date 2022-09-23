@@ -188,7 +188,7 @@
   sc4 = float(sc4)
   sc5 = float(sc5)
   sc6 = float(sc6)
-  
+
 
 
 
@@ -252,7 +252,20 @@
       // add to variables
       data2 = JSON.parse(xhr.responseText);
       // get first element first name
+      // function to render data set interval
+      renderData(data2, 20)
+      
+  
 
+      
+      
+    
+   }};
+    xhr.send();
+    
+  function renderData(data2, seconds){
+
+    while(true){
       var tit = document.getElementById("user1")
       tit.innerHTML = "@" + data2[0].User
       var valu = document.getElementById("score1")
@@ -277,14 +290,11 @@
       tit5.innerHTML = "@" +data2[5].User
       var val5 = document.getElementById("score6")
       val5.innerHTML = data2[5].Score
-  
+      sleep(seconds*1000);
 
-      
-      
+    }
     
-   }};
-    xhr.send();
-    
+  }
 
     
     

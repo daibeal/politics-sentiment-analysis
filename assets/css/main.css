@@ -296,13 +296,48 @@ section {
 .topbar .social-links a:hover {
   color: #fff;
 }
-
+.fa-twitter{
+  color: #1DA1F2;
+  /*make ir larger*/
+  font-size: 1.5em;
+}
 .header {
   transition: all 0.5s;
   z-index: 997;
   height: 90px;
   background-color: var(--color-primary);
 }
+h1 {
+  /* font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  font-family: var(--font-secondary); */
+  /*underline*/
+  text-decoration: underline;
+  /*overline*/
+  text-decoration: overline;
+  /*animation*/
+  animation: mymove 10s infinite;
+
+}
+
+@keyframes mymove {
+  0% {
+    color: black;
+    font-size: 2.5rem;
+  }
+  50% {
+    color: darkblue;
+    font-size: 3rem;
+  }
+  100% {
+    color: black;
+    font-size: 2.5rem;
+  }
+
+}
+
+
 
 .header.sticked {
   position: fixed;

@@ -315,32 +315,7 @@ section {
   height: 90px;
   background-color: var(--color-primary);
 }
-h1 {
-  /* font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: 0;
-  font-family: var(--font-secondary); */
-  
-  /*animation*/
-  animation: mymove 10s infinite;
 
-}
-
-@keyframes mymove {
-  0% {
-    color: black;
-    font-size: 2.5rem;
-  }
-  50% {
-    color: darkblue;
-    font-size: 3rem;
-  }
-  100% {
-    color: black;
-    font-size: 2.5rem;
-  }
-
-}
 
 
 

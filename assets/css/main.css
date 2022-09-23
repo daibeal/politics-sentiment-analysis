@@ -15,6 +15,15 @@
   --font-primary: "Montserrat", sans-serif;
   --font-secondary: "Poppins", sans-serif;
 }
+.plot-container {
+  width: 100%;
+  text-align: center;
+  margin-left: 15rem !important;
+}
+.main-svg{
+  width: 100%;
+  border: none;
+}
 
 /* Colors */
 :root {
@@ -312,10 +321,7 @@ h1 {
   font-weight: 600;
   margin-bottom: 0;
   font-family: var(--font-secondary); */
-  /*underline*/
-  text-decoration: underline;
-  /*overline*/
-  text-decoration: overline;
+  
   /*animation*/
   animation: mymove 10s infinite;
 

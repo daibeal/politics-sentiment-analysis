@@ -253,7 +253,7 @@
       data2 = JSON.parse(xhr.responseText);
       // get first element first name
       // function to render data set interval
-      renderData(data2, 20)
+      renderData(data2, 1);
       
   
 
@@ -262,8 +262,10 @@
     
    }};
     xhr.send();
-    
-  function renderData(data2, seconds){
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+async function renderData(data2, seconds){
 
     while(true){
       var tit = document.getElementById("user1")
@@ -290,7 +292,7 @@
       tit5.innerHTML = "@" +data2[5].User
       var val5 = document.getElementById("score6")
       val5.innerHTML = data2[5].Score
-      sleep(seconds*1000);
+      await sleep(i * 1000);
 
     }
     

@@ -136,10 +136,14 @@
     </section><!-- End Testimonials Section -->
     
     <section id="chart">
-      <div id='chart1' style="text-align: center; border: none; width: 100%;">
+      
+      <div class="container" data-aos="fade-up">
+        <div id='chart1' class="fade-up" style="text-align: center; border: none; width: 100%;">
 
-        <!-- <img src="https://storage.googleapis.com/bucket-elastic/plot.png" alt=""> -->
+          <!-- <img src="https://storage.googleapis.com/bucket-elastic/plot.png" alt=""> -->
+        </div>
       </div>
+     
     </section>
     
 
@@ -165,15 +169,8 @@
   fig.update_layout(title_text='Sentiment Analysis of Spanish Politicians')
   fig.update_layout(
     autosize=False,
-    width=1400,
-    height=800,
-    margin=dict(
-        l=50,
-        r=50,
-        b=100,
-        t=100,
-        pad=4
-    ),
+    width=1300,
+    height=800
   )  
   js.plot(fig.to_json(), "chart1")
 </py-script>

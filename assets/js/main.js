@@ -312,3 +312,10 @@ fetch('scores.json')
     users.push(data.presi6.User);
   });
 //user
+// if mobile hide chart
+if (window.innerWidth < 768) {
+  document.getElementById("chart").style.display = "none";
+  // hide footer
+  document.getElementById("footer").style.display = "none";
+  // change backgroun colo
+}

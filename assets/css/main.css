@@ -309,7 +309,8 @@ section {
 .fa-twitter{
   color: #1DA1F2;
   /*make ir larger*/
-  font-size: 1.5em;
+  /* font-size: 1.5em; */
+  
 }
 .header {
   transition: all 0.5s;
@@ -2805,4 +2806,38 @@ svg{
   /*move chart up*/
   margin-top: -60px;
 
+}
+
+/*on phones*/
+@media (max-width: 767px) {
+  .footer {
+    position: absolute;
+    width: 100%;
+  }
+  
+  .testimonial-item {
+    height: 20rem;
+    text-align: center !important;
+   
+  }
+  .img-t {
+    width: 100 !important;
+  }
+  .some-txt {
+    position: relative;
+    top: 2rem;
+    
+  }
+  .testimonial-img{
+    width: 15rem !important;
+    height: 15rem !important;
+    
+    position: absolute;
+  }
+  .d-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }

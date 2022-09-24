@@ -54,8 +54,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h1>Sentiment Analysis</h1>
-          <i class="fa-brands fa-twitter"></i>
+          
+          <h1>Sentiment Analysis <i class="fa-brands fa-twitter"></i></h1>
         </div>
 
         <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
@@ -65,8 +65,11 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center">
-                    <img src="https://pbs.twimg.com/profile_images/1546025607863181315/O5o2j-80_400x400.jpg" class="testimonial-img flex-shrink-0" alt="">
-                    <div>
+                    <div class="img-t">
+                      <img src="https://pbs.twimg.com/profile_images/1546025607863181315/O5o2j-80_400x400.jpg" class="testimonial-img flex-shrink-0" alt="">
+                    </div>
+                    
+                    <div class="some-txt">
                       <h3 id="user1">Pedro Sánchez</h3>
                       <h4 id="score1"></h4>
                     </div>
@@ -78,8 +81,11 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center">
-                    <img src="https://img2.rtve.es/css/rtve.elecciones/rtve.elecciones.nacional/i/lideres.png/vox_santiago-abascal.png" class="testimonial-img flex-shrink-0" alt="">
-                    <div>
+                    <div class="img-t">
+                      <img src="https://img2.rtve.es/css/rtve.elecciones/rtve.elecciones.nacional/i/lideres.png/vox_santiago-abascal.png" class="testimonial-img flex-shrink-0" alt="">
+                    </div>
+                    
+                    <div class="some-txt">
                       <h3 id="user2">Santiago Abascal</h3>
                       <h4 id="score2"></h4>
                     </div>
@@ -91,8 +97,10 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Yolanda_D%C3%ADaz_2020_%28cropped%29.jpg" class="testimonial-img flex-shrink-0" alt="">
-                    <div>
+                    <div class="img-t">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Yolanda_D%C3%ADaz_2020_%28cropped%29.jpg" class="testimonial-img flex-shrink-0" alt="">
+                    </div>
+                    <div class="some-txt">
                       <h3 id="user3">Yolanda Díaz</h3>
                       <h4 id="score3"></h4>
                     </div>
@@ -104,8 +112,11 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Carmen_Calvo_2020_%28portrait%29.jpg/640px-Carmen_Calvo_2020_%28portrait%29.jpg" class="testimonial-img flex-shrink-0" alt="">
-                    <div>
+                    <div class="img-t">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Carmen_Calvo_2020_%28portrait%29.jpg/640px-Carmen_Calvo_2020_%28portrait%29.jpg" class="testimonial-img flex-shrink-0" alt="">
+                    </div>
+                    
+                    <div class="some-txt">
                       <h3 id="user4">Carmen Calvo</h3>
                       <h4 id="score4"></h4>
                     </div>
@@ -117,8 +128,10 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center">
-                    <img src="https://www.lamoncloa.gob.es/gobierno/PublishingImages/GobiernoEnero2020/14012020_Mar%C3%ADa%20Jes%C3%BAs%20Montero.jpg?RenditionID=31" class="testimonial-img flex-shrink-0" alt="">
-                    <div>
+                    <div class="img-t"><img src="https://www.lamoncloa.gob.es/gobierno/PublishingImages/GobiernoEnero2020/14012020_Mar%C3%ADa%20Jes%C3%BAs%20Montero.jpg?RenditionID=31" class="testimonial-img flex-shrink-0" alt="">
+                    </div>
+                    
+                    <div class="some-txt">
                       <h3 id="user5">María Jesus Montero</h3>
                       <h4 id="score5"></h4>
                     </div>
@@ -130,8 +143,10 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Isabel_D%C3%ADaz_Ayuso_en_el_s%C3%A9ptimo_aniversario_de_El_Huffpost_%28cropped%29.jpg/1200px-Isabel_D%C3%ADaz_Ayuso_en_el_s%C3%A9ptimo_aniversario_de_El_Huffpost_%28cropped%29.jpg" class="testimonial-img flex-shrink-0" alt="">
-                    <div>
+                    <div class="img-t">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Isabel_D%C3%ADaz_Ayuso_en_el_s%C3%A9ptimo_aniversario_de_El_Huffpost_%28cropped%29.jpg/1200px-Isabel_D%C3%ADaz_Ayuso_en_el_s%C3%A9ptimo_aniversario_de_El_Huffpost_%28cropped%29.jpg" class="testimonial-img flex-shrink-0" alt="">
+                    </div> 
+                    <div class="some-txt">
                       <h3 id="user6">Isabel Díaz Ayuso</h3>
                       <h4 id="score6"></h4>
                     </div>
@@ -167,7 +182,7 @@
       }
   </script>
 
-<py-script id="main">
+<py-script id="main" class="py-s">
   import numpy as np
   import pandas as pd
   import plotly.graph_objects as go

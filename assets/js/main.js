@@ -298,6 +298,8 @@ if (window.innerWidth < 768) {
   document.getElementById("chart").style.display = "none";
   // hide footer
   document.getElementById("footer").style.display = "none";
-  // change backgroun colo
+  // delete pyscript by class
+  document.getElementByClassName("py-s").style.display = "none";
+
 }
 

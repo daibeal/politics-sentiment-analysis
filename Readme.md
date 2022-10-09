@@ -19,7 +19,7 @@ Siendo estos:
 
 ## Diagrama
 
-
+- [Arquitectura.pdf](Arquitectura.pdf) 
 ## Página Web
 [https://daibeal.github.io/politics-sentiment-analysis/](https://daibeal.github.io/politics-sentiment-analysis/)
 
